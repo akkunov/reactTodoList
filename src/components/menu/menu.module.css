@@ -1,0 +1,62 @@
+.menu:focus,
+.menu:focus-visible{
+    outline: none !important;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    width: 4rem;
+    height: 3rem;
+    transition: all 200ms ease-in;
+}
+.menu:hover{
+    background-color: #cccccc;
+}
+
+.menuContainer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 10rem;
+    height: auto;
+    align-items: center;
+}
+.menuListContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 3rem;
+    z-index: 1000;
+    list-style: none;
+    background-color: #7a7a7a;
+    border-radius: .3rem;
+}
+
+.menuList{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    list-style: none;
+    width: 10rem;
+    height: 1rem;
+    cursor: pointer;
+    border-radius: .3rem;
+    color: var(--light);
+    font-size: 1.2rem;
+    font-weight: normal;
+    padding: .7rem;
+    margin: .5rem;
+    transition: all 200ms ease-in;
+    column-gap: .5rem;
+}
+.menuList:hover{
+    background-color: #b6b6b6;
+}
