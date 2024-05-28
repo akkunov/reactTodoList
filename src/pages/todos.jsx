@@ -19,9 +19,8 @@ function Todos(props) {
         ),
     }];
 
-    const {...otherProps} = props;
     const dispatch = useDispatch();
-    function handleClick (){
+    function crateNewBoard (){
         const newTodo = {name:"Untitled", id: Date.now().toString(), todoItems:[]}
         dispatch(createTodo(newTodo));
     }
@@ -29,7 +28,6 @@ function Todos(props) {
         <div className={'container'}>
             {todos?.map((items, boardIndex )=>  <Board
                 {...items}
-                {...otherProps}
                 boardIndex={boardIndex}
                 menuItems={menuItems}
                 currentBoard={currentBoard}
@@ -37,7 +35,7 @@ function Todos(props) {
                 currentItem={currentItem}
                 setCurrentItem={setCurrentItem}
                 key={items.id}/> )}
-            <button className={'button'} onClick={handleClick}>New todo</button>
+            <button className={'button'} onClick={crateNewBoard}>New todo</button>
         </div>
     );
 }

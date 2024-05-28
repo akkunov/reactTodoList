@@ -12,8 +12,6 @@ function Board(props) {
         menuItems,
         currentItem,
         currentBoard,
-        setCurrentBoard,
-        setCurrentItem,
         boardIndex,
         ...otherProps } = props;
     const dispatch = useDispatch();
@@ -99,8 +97,6 @@ function Board(props) {
                     key={items.id}
                     currentItem={currentItem}
                     currentBoard={currentBoard}
-                    setCurrentBoard={setCurrentBoard}
-                    setCurrentItem={setCurrentItem}
                     boardIndex={boardIndex}
                     parentId={id}
                     itemIndex={itemIndex}
