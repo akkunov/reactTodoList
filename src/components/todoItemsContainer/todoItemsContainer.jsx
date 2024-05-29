@@ -1,12 +1,19 @@
 import React, {useState} from 'react';
 import css from './todoItemsContainer.module.css';
 import TodoItem from "../todoItem/TodoItem.jsx";
-import {addTodo, removeTodo, updateTodoTitle} from "../../store/todoSlice.jsx";
-import {useDispatch} from "react-redux";
 import DotMenu from "../menu";
 
+
+import {addTodo, removeTodo, updateTodoTitle} from "../../store/todoSlice.jsx";
+import {useDispatch} from "react-redux";
+
+
+
+
+
+
 function TodoItemsContainer(props) {
-    const {name, id, todoItems, ...otherProps} = props;
+    const {name, id, todoItems, menuItems, ...otherProps} = props;
     const dispatch = useDispatch();
     const [isEdit, setIsEdit] = useState(false);
     const [value, setValue] = useState(name);
@@ -61,7 +68,9 @@ function TodoItemsContainer(props) {
 
                 }
 
-                <DotMenu callback={removeTodos} />
+                <DotMenu callback={removeTodos} menuItems={menuItems}/>
+
+
                 <span className={css.taskCount}>{todoItems.length}</span>
             </header>
             {todoItems?.map(items => (

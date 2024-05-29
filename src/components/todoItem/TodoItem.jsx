@@ -1,7 +1,9 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import css from './TodoItem.module.css';
+
 import {useDispatch} from "react-redux";
 import {updateTodoValue} from "../../store/todoSlice.jsx";
+
 
 function TodoItem(props) {
     const {parentId, title, id} = props
