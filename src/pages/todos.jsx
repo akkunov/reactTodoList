@@ -1,5 +1,5 @@
-import React from 'react';
-import TodoItemsContainer from "../components/todoItemsContainer/todoItemsContainer.jsx";
+import React, {useState} from 'react';
+import Board from "../components/board/board.jsx";
 
 
 import {useDispatch, useSelector} from "react-redux";
@@ -7,6 +7,8 @@ import {createTodo} from "../store/todoSlice.jsx";
 
 function Todos(props) {
     const todos = useSelector(state => state.todo.data);
+    const  [currentBoard, setCurrentBoard]= useState(null)
+    const  [currentItem, setCurrentItem]= useState(null)
 
     const menuItems = [{
         name: 'Delete',
@@ -25,10 +27,15 @@ function Todos(props) {
     }
     return (
         <div className={'container'}>
-            {todos?.map((items,index )=>  <TodoItemsContainer
+            {todos?.map((items, boardIndex )=>  <Board
                 {...items}
                 {...otherProps}
+                boardIndex={boardIndex}
                 menuItems={menuItems}
+                currentBoard={currentBoard}
+                setCurrentBoard={ setCurrentBoard}
+                currentItem={currentItem}
+                setCurrentItem={setCurrentItem}
                 key={items.id}/> )}
             <button className={'button'} onClick={handleClick}>New todo</button>
         </div>
