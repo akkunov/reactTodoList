@@ -68,7 +68,7 @@ function TodoItem(props) {
     function dragEndHandler(e) {
         setTimeout(() => {
             setPlaceholder(false);
-        }, 300); // задержка, соответствующая продолжительности CSS-транзиции
+        }, 300);
 
         setIsDragging(false);
     }
@@ -76,7 +76,7 @@ function TodoItem(props) {
     function dragLeaveHandler(e) {
         setTimeout(() => {
             setPlaceholder(false);
-        }, 300); // задержка, соответствующая продолжительности CSS-транзиции
+        }, 300);
 
     }
 
@@ -92,13 +92,14 @@ function TodoItem(props) {
         );
         setTimeout(() => {
             setPlaceholder(false);
-        }, 300); // задержка, соответствующая продолжительности CSS-транзиции
+        }, 300);
     }
 
+    const containerClass = `${css.container} ${isDragging ? css.dragging : ''} ${isRemoving ? css.removing : ''}`
     return (
         <>
             <div
-                className={`${css.container} ${isDragging ? css.dragging : ''} ${isRemoving ? css.removing : ''}`}
+                className={containerClass}
                 draggable
                 onDragStart={e => dragStartHandler(e, boardIndex, itemIndex)}
                 onDragOver={e => dragOverHandler(e)}
