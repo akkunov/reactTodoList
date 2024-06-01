@@ -6,4 +6,4 @@
 
 Так же пакеты все последней верии так же скачивайте не волнуйтесь
 
-Опубликован на [netlify.com][https://reacttodolistnotion.netlify.app/]
+Опубликован на [netlify.com](https://reacttodolistnotion.netlify.app/)
