@@ -1,8 +1,9 @@
-# React + Vite
+Это приложение написано на react vite, redux toolkit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Испольвал компонентный подход легко можно понять код 
 
-Currently, two official plugins are available:
+По сути приложение преставояет из себя что-то вроде kanban  board с его осоновным функционалом 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Так же пакеты все последней верии так же скачивайте не волнуйтесь
+
+Опубликован на [netlify.com][https://reacttodolistnotion.netlify.app/]
